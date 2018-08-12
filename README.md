@@ -91,3 +91,51 @@ if (n <= 1) return 1;
 return n * factorial(n-1);
 ```
 
+## Day 10 - Binary Numbers
+```java
+int r = 0;
+for (String b : Integer.toString(n, 2).split("0"))
+  if (r < b.length()) r = b.length();
+System.out.println(r);
+```
+
+## Day 11 - 2D Arrays
+```java
+ArrayList<Integer> sum = new ArrayList<Integer>();
+for (int i = 1; i < arr.length - 1; i++)
+  for (int j = 1; j < arr[i].length - 1; j++) {
+    sum.add(arr[i-1][j-1] + arr[i-1][j] + arr[i-1][j+1]
+                            + arr[i][j]
+            +arr[i+1][j-1] + arr[i+1][j] + arr[i+1][j+1]);
+  }
+System.out.println(Collections.max(sum));
+```
+
+## Day 12 - Inheritance
+```java
+// Constructor
+Student(String f, String l, int i, int[] s) {
+  super(f, l, i);
+  testScores = s;
+}
+
+// Calculate
+double a = Arrays.stream(testScores).average().orElse(Double.NaN);
+return a > 89 ? 'O' : a > 79 ? 'E' : a > 69 ? 'A' : a > 54 ? 'P' : a > 39 ? 'D' : 'T';
+```
+
+## Day 13 - Abstract Classes
+```java
+// Display
+System.out.format("Title: %s", title).println();
+System.out.format("Author: %s", author).println();
+System.out.format("Price: %d", price);
+```
+
+## Day 14- Scope
+```java
+// computeDifference
+Arrays.sort(elements);
+maximumDifference = Math.abs(elements[elements.length-1] - elements[0]);
+```
+
