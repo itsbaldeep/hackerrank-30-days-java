@@ -139,3 +139,48 @@ Arrays.sort(elements);
 maximumDifference = Math.abs(elements[elements.length-1] - elements[0]);
 ```
 
+## Day 15 - Linked List
+```java
+if (head == null) return new Node(data);
+head.next = insert(head.next, data);
+return head;
+```
+
+## Day 16 - Exceptions - String to Integer
+```java
+try { System.out.println(Integer.parseInt(S)); }
+catch (NumberFormatException e) { System.out.println("Bad String"); }
+```
+
+## Day 17 - More Exceptions
+```java
+int power(int n, int p) throws Exception {
+  if (n < 0 || p < 0)
+   throw new Exception("n and p should be non-negative");
+  return (int) Math.pow(n, p);
+}
+```
+
+## Day 18 - Queues and Stacks
+```java
+Stack<Character> stack = new Stack<>();
+Queue<Character> queue = new LinkedList<>();
+void enqueueCharacter(char c) { queue.add(c); }
+void pushCharacter(char c) { stack.add(c); }
+char dequeueCharacter() { return queue.remove(); }
+char popCharacter() { return stack.pop(); }
+```
+
+## Day 19 - Interfaces
+```java
+int sum = n;
+for (int i = 1; i <= n / 2; i++)
+   if (n % i == 0) sum += i;
+return sum;
+```
+
+
+
+
+
+
