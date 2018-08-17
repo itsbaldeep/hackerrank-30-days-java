@@ -179,7 +179,54 @@ for (int i = 1; i <= n / 2; i++)
 return sum;
 ```
 
+## Day 20 - Sorting
+```java
+int swaps = 0;
+for (int j = 0; j < n; j++) for (int i = 0; i < n - 1; i++)
+  if (a[i] > a[i + 1]) {
+    int temp = a[i];
+    a[i] = a[i + 1];
+    a[i + 1] = temp;
+    swaps++;
+  }
+System.out.format("Array is sorted in %d swaps.", swaps).println();
+System.out.format("First Element: %d", a[0]).println();
+System.out.format("Last Element: %d", a[n - 1]);
+```
 
+## Day 21 - Generics
+```java
+// printArray(T[] arr)
+for (T el : arr) System.out.println(el);
+```
+
+## Day 22 - Binary Search Trees
+```java
+if (root == null) return -1;
+return 1 + Math.max(getHeight(root.left), getHeight(root.right));
+```
+
+## Day 23 - BST Level-Order Transversal
+```java
+Queue<Node> q = new LinkedList();
+q.add(root);
+while (!q.isEmpty()) {
+  Node n = q.remove();
+  System.out.print(n.data + " ");
+  if (n.left != null) q.add(n.left);
+  if (n.right != null) q.add(n.right);
+}
+```
+
+## Day 24 - More Linked Lists
+```java
+if (head == null || head.next == null) return head;
+if (head.data == head.next.data) {
+  head.next = head.next.next;
+  removeDuplicates(head);
+} removeDuplicates(head.next);
+return head;
+```
 
 
 
