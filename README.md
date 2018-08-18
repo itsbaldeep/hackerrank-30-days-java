@@ -228,6 +228,62 @@ if (head.data == head.next.data) {
 return head;
 ```
 
+## Day 25 - Running Time and Complexity
+```java
+int l = s.nextInt(); // s :Scanner
+for (int j = 0; j < l; j++) {
+  int n = s.nextInt();
+  String res = "Prime";
+  for (int i = 2; i*i <= n; i++)
+    if (n % i == 0) res = "Not prime";
+  System.out.println(n > 1 ? res : "Not prime");
+}
+```
 
 
+## Day 26 - Nested Logic
+```java
+int fine = 0;
+if (expectedYear < actualYear) fine = 10000;
+else if (expectedYear == actualYear) {
+  if (expectedMonth < actualMonth) fine = Math.abs(expectedMonth - actualMonth) * 500;
+  else if (expectedMonth == actualMonth) {
+    if (expectedDate < actualDate) fine = Math.abs(expectedDate - actualDate) * 15;
+  }
+}
+System.out.println(fine);
+```
 
+
+## Day 27 - Testing
+```java
+// get_array()
+return new int[]{}; // Empty Array
+return new int[]{1,2,3}; // Unique Values
+return new int[]{1,1,2,3}; // Two Minimums
+
+// get_expected_result()
+return minimum_index(get_array());
+```
+
+
+## Day 28 - RegEx, Patterns and Intro to Databases
+```java
+ArrayList<String> users = new ArrayList();
+
+// Inside loop
+Pattern p = Pattern.compile(".+@gmail\\.com$");
+if (p.matcher(emailID).find()) users.add(firstName);
+
+// Print
+Collections.sort(users);
+for (String user : users) System.out.println(user);
+```
+
+
+## Day 29 - Bitwise AND
+```java
+int a = k - 1;
+int b = (~a) & -(~a);
+System.out.println((a | b) > n ? a - 1 : a);
+```
